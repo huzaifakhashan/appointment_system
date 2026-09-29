@@ -94,18 +94,6 @@ flutter test      # منطق التطبيق + كل الشاشات بقياس ه�
 
 بعد تعديل ملفات الترجمة `lib/l10n/*.arb` تُولَّد الملفات تلقائياً مع `flutter run`، أو يدوياً بـ `flutter gen-l10n`.
 
-### لقطات الشاشة
-
-تُولَّد من التطبيق الحقيقي فوق بيانات تجريبية في الذاكرة (بدون Firebase، ولا تلمس أي بيانات حقيقية)،
-فيمكن تحديثها بعد أي تعديل على الواجهة:
-
-```bash
-flutter test tool/screenshots --update-goldens
-```
-
-تُحفظ في `docs/screenshots/{ar,en}/`. الأمر يحتاج خط Segoe UI (موجود في ويندوز) لعرض النص العربي.
-البيانات التجريبية معرّفة في [tool/screenshots/screenshots_test.dart](tool/screenshots/screenshots_test.dart).
-
 ## بنية المشروع
 
 ```
@@ -145,3 +133,9 @@ firestore.rules        قواعد الأمان: من يقرأ ويكتب ماذ�
 الرفض أو الإلغاء يحذف هذه المستندات فيعود الوقت متاحاً.
 
 لهذا السبب يجب أن تكون مدة كل خدمة من مضاعفات ٣٠ دقيقة.
+
+
+
+## لتحميل التطبيق:
+("https://github.com/huzaifakhashan/appointment_system/release/v1.0.0")
+
