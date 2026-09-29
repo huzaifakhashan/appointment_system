@@ -1,0 +1,254 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Appointments",
+
+  "signIn": "Sign in",
+  "createAccount": "Create account",
+  "nameLabel": "Name",
+  "nameRequired": "Enter a name",
+  "emailLabel": "Email",
+  "emailInvalid": "Enter a valid email",
+  "passwordLabel": "Password",
+  "passwordTooShort": "At least 6 characters",
+  "passwordRequired": "Enter your password",
+  "alreadyHaveAccount": "Already have an account? Sign in",
+  "newHere": "New here? Create an account",
+  "authErrorWrongPassword": "Wrong email or password",
+  "authErrorWrongCurrentPassword": "Incorrect password",
+  "authErrorEmailInUse": "This email is already registered",
+  "authErrorWeakPassword": "Password must be at least 6 characters",
+  "authErrorInvalidEmail": "Invalid email address",
+  "authErrorNetwork": "No internet connection",
+  "authErrorTooManyRequests": "Too many attempts. Please wait a moment and try again.",
+  "authErrorRequiresRecentLogin": "For your security, please sign out and sign in again first",
+  "authErrorGeneric": "Something went wrong. Please try again.",
+  "permissionDenied": "You don't have permission to do that",
+
+  "greeting": "Hi, {name}",
+  "@greeting": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "signOut": "Sign out",
+  "noAppointmentsYet": "No appointments yet. Tap \"Book\" to make one.",
+  "upcomingSection": "Upcoming",
+  "pastSection": "Past",
+  "cancel": "Cancel",
+  "book": "Book",
+  "cancelAppointment": "Cancel appointment",
+  "confirmCancelAppointmentTitle": "Cancel this appointment?",
+  "confirmCancelAppointmentBody": "The time will be freed for other patients. This can't be undone.",
+  "keepAppointment": "Keep it",
+  "appointmentCancelled": "Appointment cancelled",
+
+  "chooseProviderTitle": "Choose a doctor",
+  "noProvidersYet": "No doctors are available to book with yet",
+  "noProvidersInDepartment": "No doctors in this department yet",
+  "unnamedProvider": "Unnamed doctor",
+  "serviceCount": "{count, plural, =0{No services} =1{1 service} other{{count} services}}",
+  "@serviceCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "doctorCount": "{count, plural, =0{No doctors} =1{1 doctor} other{{count} doctors}}",
+  "@doctorCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "serviceConsultation": "Consultation",
+  "serviceCheckup": "Check-up",
+  "serviceFollowUp": "Follow-up",
+
+  "bookAppointmentTitle": "Book an appointment",
+  "serviceLabel": "Service",
+  "serviceDuration": "{name} ({minutes} min)",
+  "@serviceDuration": {
+    "placeholders": {
+      "name": { "type": "String" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "noServicesYet": "This doctor has no services to book yet",
+  "noWorkingDays": "This doctor has no working days set yet",
+  "minutesShort": "{minutes} min",
+  "@minutesShort": {
+    "placeholders": { "minutes": { "type": "int" } }
+  },
+  "dateLabel": "Date",
+  "availableTimes": "Available times",
+  "closedOnThisDay": "Closed on this day",
+  "noFreeTimesOnThisDay": "No free times on this day. Try another date.",
+  "noteOptional": "Note for the doctor (optional)",
+  "requestAppointment": "Request appointment",
+  "requestSent": "Request sent. You'll be notified once it's confirmed.",
+  "bookingFailed": "Could not book. That time may have just been taken.",
+
+  "statusPending": "Pending",
+  "statusConfirmed": "Confirmed",
+  "statusRejected": "Declined",
+  "statusCancelled": "Cancelled",
+
+  "bookingsTitle": "Appointments",
+  "businessSettingsTooltip": "Schedule & services",
+  "requestsTab": "Requests",
+  "calendarTab": "Calendar",
+  "noPendingRequests": "No pending requests",
+  "reject": "Decline",
+  "confirm": "Confirm",
+  "confirmRejectTitle": "Decline this request?",
+  "nothingScheduled": "Nothing scheduled on this day",
+
+  "businessSettingsTitle": "Schedule & services",
+  "businessNameLabel": "Name shown to patients",
+  "businessNameRequired": "Enter a name",
+  "workingHours": "Working hours",
+  "opensLabel": "From",
+  "closesLabel": "To",
+  "daysClosed": "Days off",
+  "weekdayMon": "Mon",
+  "weekdayTue": "Tue",
+  "weekdayWed": "Wed",
+  "weekdayThu": "Thu",
+  "weekdayFri": "Fri",
+  "weekdaySat": "Sat",
+  "weekdaySun": "Sun",
+  "servicesLabel": "Services",
+  "addService": "Add",
+  "noServicesYetAdmin": "No services yet. Patients can't book until you add one.",
+  "addServiceTitle": "Add service",
+  "editServiceTitle": "Edit service",
+  "durationMinutesLabel": "Duration (minutes)",
+  "enterAName": "Enter a name",
+  "enterMultipleOf30": "Enter a multiple of 30 (30, 60, 90…)",
+  "save": "Save",
+  "edit": "Edit",
+  "delete": "Delete",
+  "settingsSaved": "Settings saved",
+  "settingsSaveFailed": "Could not save settings",
+  "closeAfterOpenError": "Closing time must be after opening time",
+
+  "newBookingRequestTitle": "New booking request",
+  "appointmentCancelledTitle": "Appointment cancelled",
+  "appointmentConfirmedTitle": "Appointment confirmed",
+  "appointmentDeclinedTitle": "Appointment declined",
+  "reminderTitle": "Appointment in 1 hour",
+  "reminderBody": "{service} with {name}",
+  "@reminderBody": {
+    "placeholders": {
+      "service": { "type": "String" },
+      "name": { "type": "String" }
+    }
+  },
+
+  "languageLabel": "Language",
+  "languageEnglish": "English",
+  "languageArabic": "العربية",
+
+  "tabPatient": "Patient",
+  "tabStaff": "Staff",
+  "staffSignInHint": "Staff accounts are created by the administrator.",
+  "forgotPassword": "Forgot password?",
+  "resetPasswordTitle": "Reset password",
+  "sendResetLink": "Send reset link",
+  "resetEmailSent": "If that email has an account, a reset link was sent",
+
+  "adminHomeTitle": "Administration",
+  "departmentsTab": "Departments",
+  "staffTab": "Staff",
+  "addDepartmentTitle": "Add department",
+  "renameDepartmentTitle": "Rename department",
+  "departmentNameLabel": "Department name",
+  "noDepartmentsYet": "No departments yet",
+  "noStaffYet": "No staff accounts yet",
+  "addDoctorTitle": "Add doctor",
+  "departmentLabel": "Department",
+  "selectDepartmentError": "Choose a department",
+  "doctorCreated": "Doctor account created. Share the email and password with them.",
+  "doctorCreateFailed": "Could not create the doctor account",
+  "roleDoctor": "Doctor",
+  "roleAdmin": "Admin",
+  "makeAdmin": "Make admin",
+  "makeDoctor": "Make doctor",
+  "unassignedDepartment": "No department",
+  "allDepartments": "All",
+  "addDepartmentFirst": "Add a department first",
+  "editStaffTitle": "Edit staff member",
+  "staffUpdated": "Saved",
+  "removeStaffTooltip": "Remove",
+  "confirmRemoveStaffTitle": "Remove this account?",
+  "confirmRemoveStaffBody": "{name} loses all doctor/admin access right away. Their login isn't deleted; if they sign in again, it's as an ordinary patient.",
+  "@confirmRemoveStaffBody": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "remove": "Remove",
+
+  "profileTitle": "My profile",
+  "personalInfoTitle": "Personal details",
+  "profileTooltip": "Profile",
+  "nameUpdated": "Name updated",
+  "doctorNameNote": "The name patients see, your hours, and your services are edited from \"Schedule & services\".",
+  "emailVerifiedLabel": "Verified",
+  "emailNotVerifiedLabel": "Not verified",
+  "resendVerificationEmail": "Resend verification email",
+  "verificationEmailSent": "Verification email sent",
+  "verificationEmailSentTo": "Verification email sent to {email}. Not in your inbox? Check your Spam or Junk folder.",
+  "@verificationEmailSentTo": {
+    "placeholders": { "email": { "type": "String" } }
+  },
+  "refreshStatus": "I've verified it",
+  "stillNotVerified": "Not verified yet. Open the link in the email first.",
+  "changePasswordTitle": "Change password",
+  "currentPasswordLabel": "Current password",
+  "newPasswordLabel": "New password",
+  "confirmPasswordLabel": "Confirm new password",
+  "passwordsDontMatch": "Passwords don't match",
+  "passwordUpdated": "Password updated",
+  "updatePassword": "Update password",
+  "deleteAccountTitle": "Delete account",
+  "deleteAccountBody": "Your account and personal details will be permanently deleted, and your upcoming appointments will be cancelled. This can't be undone.",
+  "deleteAccountConfirmTitle": "Delete your account?",
+  "deleteAccountPasswordLabel": "Enter your password to confirm",
+  "deleteAccountConfirm": "Delete permanently",
+  "accountDeleted": "Your account has been deleted",
+  "phoneLabel": "Phone number",
+  "phoneUpdated": "Phone number updated",
+
+  "verifyEmailTitle": "Verify your email",
+  "verifyEmailBody": "We sent a verification link to {email}. Open it to start booking appointments.",
+  "@verifyEmailBody": {
+    "placeholders": { "email": { "type": "String" } }
+  },
+  "checkSpamHint": "Didn't get it? Check your spam folder.",
+  "signOutFailed": "Could not sign out. Check your connection.",
+  "pressBackAgainToExit": "Press back again to exit",
+
+  "patientsTab": "Patients",
+  "noPatientsYet": "No patients yet",
+  "phoneInvalid": "Enter a valid phone number",
+  "departmentNameRequired": "Enter a department name",
+
+  "resetPasswordTooltip": "Send password reset email",
+  "passwordResetSentTo": "Password reset email sent to {email}",
+  "@passwordResetSentTo": {
+    "placeholders": { "email": { "type": "String" } }
+  },
+  "suspendPatientTooltip": "Suspend",
+  "unsuspendPatientTooltip": "Unsuspend",
+  "suspendedLabel": "Suspended",
+  "confirmSuspendTitle": "Suspend this patient?",
+  "confirmSuspendBody": "{name} won't be able to book new appointments until you unsuspend them.",
+  "@confirmSuspendBody": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "confirmDeletePatientTitle": "Delete this patient?",
+  "confirmDeletePatientBody": "{name}'s profile will be removed. Their login isn't deleted, and appointments they already made are unaffected.",
+  "@confirmDeletePatientBody": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "patientRemoved": "Patient removed",
+
+  "confirmDeleteDepartmentTitle": "Delete this department?",
+  "confirmDeleteDepartmentBody": "{count, plural, =0{No doctors are assigned to it.} =1{1 doctor is assigned to it and will be left without a department.} other{{count} doctors are assigned to it and will be left without a department.}}",
+  "@confirmDeleteDepartmentBody": {
+    "placeholders": { "count": { "type": "int" } }
+  }
+}

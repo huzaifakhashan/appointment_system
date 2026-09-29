@@ -1,0 +1,107 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function role(uid) {
+      return get(/databases/$(database)/documents/users/$(uid)).data.role;
+    }
+
+    // True if the caller is signed in as the provider (doctor) account
+    // [providerId] (used to gate access to one specific doctor's data).
+    function isThisProvider(providerId) {
+      return signedIn() && request.auth.uid == providerId
+        && exists(/databases/$(database)/documents/users/$(providerId))
+        && role(providerId) == 'provider';
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        && role(request.auth.uid) == 'admin';
+    }
+
+    // A patient the admin has blocked from booking. Doesn't touch anything
+    // they've already booked, and doesn't stop them signing in — just new
+    // appointments.
+    function isSuspended(uid) {
+      return exists(/databases/$(database)/documents/users/$(uid))
+        && get(/databases/$(database)/documents/users/$(uid)).data.suspended == true;
+    }
+
+    // Profiles. Everyone self-registers as a customer (patient); a provider
+    // (doctor) or admin account is created by an existing admin instead —
+    // never self-promoted. A provider's own doc also holds their business
+    // name/hours/services/department and doubles as their directory listing,
+    // so any signed-in user may read a provider's doc.
+    match /users/{uid} {
+      allow read: if signedIn() &&
+        (request.auth.uid == uid || resource.data.role == 'provider' || isAdmin());
+      allow create: if (signedIn() && request.auth.uid == uid
+          && request.resource.data.role == 'customer') || isAdmin();
+      // A user can edit their own profile fields, but not their own role or
+      // suspension state — both are admin-only, or a patient could just
+      // flip `suspended` back off themselves.
+      allow update: if (signedIn() && request.auth.uid == uid
+          && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'suspended']))
+          || isAdmin();
+      // An admin removing someone from the roster: their Auth login isn't
+      // deleted (only a signed-in user can delete their own login, and this
+      // app has no paid backend to do it on their behalf) — without this
+      // profile doc they simply fall back to an ordinary patient account if
+      // they ever sign back in, with none of the access this doc granted.
+      // A patient may also delete their own profile when deleting their
+      // account; doctors/admins can't, so staff are only ever removed by an
+      // admin. (resource == null covers a profile that was never saved.)
+      allow delete: if isAdmin()
+        || (signedIn() && request.auth.uid == uid
+            && (resource == null || resource.data.role == 'customer'));
+    }
+
+    // Hospital departments (Dentistry, Ophthalmology, ...). Admin only.
+    match /departments/{id} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+
+    match /appointments/{id} {
+      allow read: if signedIn() &&
+        (resource.data.customerId == request.auth.uid
+          || isThisProvider(resource.data.providerId)
+          || isAdmin());
+
+      allow create: if signedIn()
+        && request.resource.data.customerId == request.auth.uid
+        && request.resource.data.status == 'pending'
+        // Blocks made-up email addresses from ever booking: the account can
+        // exist, but can't reserve a real slot until it proves the address.
+        && request.auth.token.email_verified == true
+        && !isSuspended(request.auth.uid);
+
+      // The provider can confirm/reject/cancel; the owner can only cancel.
+      allow update: if signedIn()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status'])
+        && (isThisProvider(resource.data.providerId)
+            || (resource.data.customerId == request.auth.uid
+                && request.resource.data.status == 'cancelled'));
+    }
+
+    // One doc per busy 30-minute block, id = "<providerId>_<yyyyMMddHHmm>".
+    // Because creating an existing doc is an update (denied), two customers
+    // can never take the same slot with the same provider; different
+    // providers never share a slot id, so they never block each other.
+    match /slots/{slot} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.owner == request.auth.uid
+        && request.auth.token.email_verified == true
+        && !isSuspended(request.auth.uid);
+      allow delete: if signedIn() &&
+        (resource.data.owner == request.auth.uid
+          || isThisProvider(resource.data.providerId));
+    }
+  }
+}

@@ -1,0 +1,43 @@
+name: appointment_system
+description: "Hospital appointment booking for patients, doctors, and admins (Firebase, English/Arabic)."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Firebase: sign-in and the database.
+  firebase_core: ^4.15.0
+  firebase_auth: ^6.7.0
+  cloud_firestore: ^6.10.0
+
+  # UI.
+  cupertino_icons: ^1.0.8
+  table_calendar: ^3.2.1
+  intl: ^0.20.2
+
+  # Local notifications and appointment reminders.
+  flutter_local_notifications: ^22.3.1
+  timezone: ^0.11.1
+  flutter_timezone: ^5.1.0
+
+  # Remembers the chosen language.
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+  # Generates AppLocalizations from lib/l10n/*.arb (see l10n.yaml).
+  generate: true

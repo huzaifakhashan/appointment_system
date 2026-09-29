@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "817314283814",
+    "project_id": "appointment-system-hk26",
+    "storage_bucket": "appointment-system-hk26.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817314283814:android:c442b1889eeaf681f001e7",
+        "android_client_info": {
+          "package_name": "com.example.appointment_system"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHf0poTslk4UKEQUGWwEpGtjciHykXQhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

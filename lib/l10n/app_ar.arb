@@ -1,0 +1,254 @@
+{
+  "@@locale": "ar",
+
+  "appTitle": "المواعيد",
+
+  "signIn": "تسجيل الدخول",
+  "createAccount": "إنشاء حساب",
+  "nameLabel": "الاسم",
+  "nameRequired": "أدخل الاسم",
+  "emailLabel": "البريد الإلكتروني",
+  "emailInvalid": "أدخل بريداً إلكترونياً صحيحاً",
+  "passwordLabel": "كلمة المرور",
+  "passwordTooShort": "٦ أحرف على الأقل",
+  "passwordRequired": "أدخل كلمة المرور",
+  "alreadyHaveAccount": "لديك حساب؟ سجّل الدخول",
+  "newHere": "مستخدم جديد؟ أنشئ حساباً",
+  "authErrorWrongPassword": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+  "authErrorWrongCurrentPassword": "كلمة المرور غير صحيحة",
+  "authErrorEmailInUse": "هذا البريد الإلكتروني مسجّل مسبقاً",
+  "authErrorWeakPassword": "يجب أن تتكون كلمة المرور من ٦ أحرف على الأقل",
+  "authErrorInvalidEmail": "البريد الإلكتروني غير صالح",
+  "authErrorNetwork": "لا يوجد اتصال بالإنترنت",
+  "authErrorTooManyRequests": "محاولات كثيرة. انتظر قليلاً ثم حاول مجدداً.",
+  "authErrorRequiresRecentLogin": "لحماية حسابك، سجّل الخروج ثم ادخل مجدداً قبل تنفيذ هذا الإجراء",
+  "authErrorGeneric": "حدث خطأ ما. حاول مجدداً.",
+  "permissionDenied": "لا تملك صلاحية تنفيذ هذا الإجراء",
+
+  "greeting": "أهلاً، {name}",
+  "@greeting": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "signOut": "تسجيل الخروج",
+  "noAppointmentsYet": "لا توجد مواعيد بعد. اضغط \"حجز\" لحجز موعد.",
+  "upcomingSection": "القادمة",
+  "pastSection": "السابقة",
+  "cancel": "إلغاء",
+  "book": "حجز",
+  "cancelAppointment": "إلغاء الموعد",
+  "confirmCancelAppointmentTitle": "إلغاء هذا الموعد؟",
+  "confirmCancelAppointmentBody": "سيصبح هذا الوقت متاحاً لمرضى آخرين. لا يمكن التراجع عن ذلك.",
+  "keepAppointment": "إبقاء الموعد",
+  "appointmentCancelled": "تم إلغاء الموعد",
+
+  "chooseProviderTitle": "اختر الطبيب",
+  "noProvidersYet": "لا يوجد أطباء متاحون للحجز بعد",
+  "noProvidersInDepartment": "لا يوجد أطباء في هذا القسم بعد",
+  "unnamedProvider": "طبيب بدون اسم",
+  "serviceCount": "{count, plural, zero{لا توجد خدمات} one{خدمة واحدة} two{خدمتان} few{{count} خدمات} many{{count} خدمة} other{{count} خدمة}}",
+  "@serviceCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "doctorCount": "{count, plural, =0{لا يوجد أطباء} =1{طبيب واحد} =2{طبيبان} few{{count} أطباء} many{{count} طبيباً} other{{count} طبيب}}",
+  "@doctorCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "serviceConsultation": "استشارة",
+  "serviceCheckup": "فحص عام",
+  "serviceFollowUp": "مراجعة",
+
+  "bookAppointmentTitle": "حجز موعد",
+  "serviceLabel": "الخدمة",
+  "serviceDuration": "{name} ({minutes} دقيقة)",
+  "@serviceDuration": {
+    "placeholders": {
+      "name": { "type": "String" },
+      "minutes": { "type": "int" }
+    }
+  },
+  "noServicesYet": "لا توجد لدى هذا الطبيب خدمات متاحة للحجز بعد",
+  "noWorkingDays": "لم يحدد هذا الطبيب أيام عمله بعد",
+  "minutesShort": "{minutes} دقيقة",
+  "@minutesShort": {
+    "placeholders": { "minutes": { "type": "int" } }
+  },
+  "dateLabel": "التاريخ",
+  "availableTimes": "الأوقات المتاحة",
+  "closedOnThisDay": "لا يوجد دوام في هذا اليوم",
+  "noFreeTimesOnThisDay": "لا توجد أوقات متاحة في هذا اليوم. جرّب تاريخاً آخر.",
+  "noteOptional": "ملاحظة للطبيب (اختياري)",
+  "requestAppointment": "طلب الموعد",
+  "requestSent": "تم إرسال الطلب. سيصلك إشعار عند تأكيده.",
+  "bookingFailed": "تعذّر الحجز. ربما حُجز هذا الوقت للتو.",
+
+  "statusPending": "بانتظار التأكيد",
+  "statusConfirmed": "مؤكد",
+  "statusRejected": "مرفوض",
+  "statusCancelled": "ملغى",
+
+  "bookingsTitle": "المواعيد",
+  "businessSettingsTooltip": "الدوام والخدمات",
+  "requestsTab": "الطلبات",
+  "calendarTab": "التقويم",
+  "noPendingRequests": "لا توجد طلبات بانتظار الرد",
+  "reject": "رفض",
+  "confirm": "تأكيد",
+  "confirmRejectTitle": "رفض هذا الطلب؟",
+  "nothingScheduled": "لا توجد مواعيد في هذا اليوم",
+
+  "businessSettingsTitle": "الدوام والخدمات",
+  "businessNameLabel": "الاسم الظاهر للمرضى",
+  "businessNameRequired": "أدخل الاسم",
+  "workingHours": "ساعات الدوام",
+  "opensLabel": "من",
+  "closesLabel": "إلى",
+  "daysClosed": "أيام العطلة",
+  "weekdayMon": "الإثنين",
+  "weekdayTue": "الثلاثاء",
+  "weekdayWed": "الأربعاء",
+  "weekdayThu": "الخميس",
+  "weekdayFri": "الجمعة",
+  "weekdaySat": "السبت",
+  "weekdaySun": "الأحد",
+  "servicesLabel": "الخدمات",
+  "addService": "إضافة",
+  "noServicesYetAdmin": "لا توجد خدمات بعد. لن يتمكن المرضى من الحجز حتى تضيف خدمة.",
+  "addServiceTitle": "إضافة خدمة",
+  "editServiceTitle": "تعديل الخدمة",
+  "durationMinutesLabel": "المدة (بالدقائق)",
+  "enterAName": "أدخل اسماً",
+  "enterMultipleOf30": "أدخل مضاعفاً للرقم ٣٠ (٣٠، ٦٠، ٩٠…)",
+  "save": "حفظ",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "settingsSaved": "تم حفظ الإعدادات",
+  "settingsSaveFailed": "تعذّر حفظ الإعدادات",
+  "closeAfterOpenError": "يجب أن يكون وقت الانتهاء بعد وقت البدء",
+
+  "newBookingRequestTitle": "طلب حجز جديد",
+  "appointmentCancelledTitle": "تم إلغاء موعد",
+  "appointmentConfirmedTitle": "تم تأكيد موعدك",
+  "appointmentDeclinedTitle": "تم رفض موعدك",
+  "reminderTitle": "لديك موعد بعد ساعة",
+  "reminderBody": "{service} مع {name}",
+  "@reminderBody": {
+    "placeholders": {
+      "service": { "type": "String" },
+      "name": { "type": "String" }
+    }
+  },
+
+  "languageLabel": "اللغة",
+  "languageEnglish": "English",
+  "languageArabic": "العربية",
+
+  "tabPatient": "مريض",
+  "tabStaff": "الطاقم الطبي",
+  "staffSignInHint": "حسابات الطاقم الطبي يُنشئها مدير النظام.",
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "resetPasswordTitle": "إعادة تعيين كلمة المرور",
+  "sendResetLink": "إرسال الرابط",
+  "resetEmailSent": "إن كان هذا البريد مسجّلاً، فقد أُرسل إليه رابط إعادة التعيين",
+
+  "adminHomeTitle": "الإدارة",
+  "departmentsTab": "الأقسام",
+  "staffTab": "الطاقم الطبي",
+  "addDepartmentTitle": "إضافة قسم",
+  "renameDepartmentTitle": "تعديل اسم القسم",
+  "departmentNameLabel": "اسم القسم",
+  "noDepartmentsYet": "لا توجد أقسام بعد",
+  "noStaffYet": "لا يوجد طاقم طبي بعد",
+  "addDoctorTitle": "إضافة طبيب",
+  "departmentLabel": "القسم",
+  "selectDepartmentError": "اختر قسماً",
+  "doctorCreated": "تم إنشاء حساب الطبيب. شارك معه البريد الإلكتروني وكلمة المرور.",
+  "doctorCreateFailed": "تعذّر إنشاء حساب الطبيب",
+  "roleDoctor": "طبيب",
+  "roleAdmin": "مدير",
+  "makeAdmin": "ترقية إلى مدير",
+  "makeDoctor": "تحويل إلى طبيب",
+  "unassignedDepartment": "بدون قسم",
+  "allDepartments": "الكل",
+  "addDepartmentFirst": "أضف قسماً أولاً",
+  "editStaffTitle": "تعديل بيانات الموظف",
+  "staffUpdated": "تم الحفظ",
+  "removeStaffTooltip": "إزالة",
+  "confirmRemoveStaffTitle": "إزالة هذا الحساب؟",
+  "confirmRemoveStaffBody": "سيفقد {name} صلاحيات الطبيب/المدير فوراً. لن يُحذف حساب الدخول الخاص به، وإذا سجّل الدخول مجدداً فسيكون حساب مريض عادياً.",
+  "@confirmRemoveStaffBody": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "remove": "إزالة",
+
+  "profileTitle": "ملفي الشخصي",
+  "personalInfoTitle": "البيانات الشخصية",
+  "profileTooltip": "الملف الشخصي",
+  "nameUpdated": "تم تحديث الاسم",
+  "doctorNameNote": "الاسم الظاهر للمرضى وساعات الدوام والخدمات تُعدَّل من \"الدوام والخدمات\".",
+  "emailVerifiedLabel": "موثّق",
+  "emailNotVerifiedLabel": "غير موثّق",
+  "resendVerificationEmail": "إعادة إرسال رسالة التحقق",
+  "verificationEmailSent": "تم إرسال رسالة التحقق",
+  "verificationEmailSentTo": "تم إرسال رسالة التحقق إلى {email}. إذا لم تجدها في البريد الوارد، فابحث في مجلد الرسائل غير المرغوب فيها (Spam أو Junk).",
+  "@verificationEmailSentTo": {
+    "placeholders": { "email": { "type": "String" } }
+  },
+  "refreshStatus": "قمت بالتوثيق",
+  "stillNotVerified": "لم يتم التوثيق بعد. افتح الرابط في الرسالة أولاً.",
+  "changePasswordTitle": "تغيير كلمة المرور",
+  "currentPasswordLabel": "كلمة المرور الحالية",
+  "newPasswordLabel": "كلمة المرور الجديدة",
+  "confirmPasswordLabel": "تأكيد كلمة المرور الجديدة",
+  "passwordsDontMatch": "كلمتا المرور غير متطابقتين",
+  "passwordUpdated": "تم تحديث كلمة المرور",
+  "updatePassword": "تحديث كلمة المرور",
+  "deleteAccountTitle": "حذف الحساب",
+  "deleteAccountBody": "سيُحذف حسابك وبياناتك الشخصية نهائياً، وستُلغى مواعيدك القادمة. لا يمكن التراجع عن ذلك.",
+  "deleteAccountConfirmTitle": "حذف حسابك؟",
+  "deleteAccountPasswordLabel": "أدخل كلمة المرور للتأكيد",
+  "deleteAccountConfirm": "حذف نهائياً",
+  "accountDeleted": "تم حذف حسابك",
+  "phoneLabel": "رقم الهاتف",
+  "phoneUpdated": "تم تحديث رقم الهاتف",
+
+  "verifyEmailTitle": "وثّق بريدك الإلكتروني",
+  "verifyEmailBody": "أرسلنا رابط تحقق إلى {email}. افتحه لتتمكن من حجز المواعيد.",
+  "@verifyEmailBody": {
+    "placeholders": { "email": { "type": "String" } }
+  },
+  "checkSpamHint": "لم تصلك الرسالة؟ تحقق من مجلد الرسائل غير المرغوب فيها.",
+  "signOutFailed": "تعذّر تسجيل الخروج. تحقق من اتصالك بالإنترنت.",
+  "pressBackAgainToExit": "اضغط رجوع مرة أخرى للخروج",
+
+  "patientsTab": "المرضى",
+  "noPatientsYet": "لا يوجد مرضى بعد",
+  "phoneInvalid": "أدخل رقم هاتف صحيحاً",
+  "departmentNameRequired": "أدخل اسم القسم",
+
+  "resetPasswordTooltip": "إرسال رابط إعادة تعيين كلمة المرور",
+  "passwordResetSentTo": "تم إرسال رابط إعادة تعيين كلمة المرور إلى {email}",
+  "@passwordResetSentTo": {
+    "placeholders": { "email": { "type": "String" } }
+  },
+  "suspendPatientTooltip": "إيقاف",
+  "unsuspendPatientTooltip": "رفع الإيقاف",
+  "suspendedLabel": "موقوف",
+  "confirmSuspendTitle": "إيقاف هذا المريض؟",
+  "confirmSuspendBody": "لن يتمكن {name} من حجز مواعيد جديدة حتى ترفع الإيقاف عنه.",
+  "@confirmSuspendBody": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "confirmDeletePatientTitle": "حذف هذا المريض؟",
+  "confirmDeletePatientBody": "سيُحذف ملف {name}. لن يُحذف حساب الدخول الخاص به، وتبقى مواعيده السابقة كما هي.",
+  "@confirmDeletePatientBody": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "patientRemoved": "تم حذف المريض",
+
+  "confirmDeleteDepartmentTitle": "حذف هذا القسم؟",
+  "confirmDeleteDepartmentBody": "{count, plural, =0{لا يوجد أطباء في هذا القسم.} =1{يوجد طبيب واحد في هذا القسم وسيصبح بدون قسم.} two{يوجد طبيبان في هذا القسم وسيصبحان بدون قسم.} other{يوجد {count} أطباء في هذا القسم وسيصبحون بدون قسم.}}",
+  "@confirmDeleteDepartmentBody": {
+    "placeholders": { "count": { "type": "int" } }
+  }
+}
