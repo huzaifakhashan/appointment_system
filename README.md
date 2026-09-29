@@ -137,5 +137,4 @@ firestore.rules        قواعد الأمان: من يقرأ ويكتب ماذ�
 
 
 ## لتحميل التطبيق:
-("https://github.com/huzaifakhashan/appointment_system/release/v1.0.0")
-
+https://github.com/huzaifakhashan/appointment_system/releases/tag/v1.0.0
